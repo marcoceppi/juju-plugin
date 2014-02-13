@@ -29,6 +29,7 @@ def subcommands():
 
 
 def main(args=None):
+    """Will parse args, if present, then execute subcommand if exists"""
     cmds = subcommands()
     p = setup_parser()
     args = p.parse_args(args)
