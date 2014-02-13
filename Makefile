@@ -20,13 +20,13 @@ clean_all: clean clean_venv
 
 .PHONY: clean_venv
 clean_venv:
-	rm -rf bin include lib local
+	rm -rf bin include lib local man
 
 .PHONY: clean
 clean:
 	find . -name '*.pyc' -delete
 	find . -name '*.bak' -delete
-	rm -f .coverage
+	rm -rf .coverage *.egg-info
 
 develop: lib/python*/site-packages/jujuplugin.egg-link
 lib/python*/site-packages/jujuplugin.egg-link:
